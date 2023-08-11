@@ -11,7 +11,7 @@ with open('config.json', 'r') as f:
 
 #general
 intents = disnake.Intents.all()
-bot = disnake.Bot(commands_prefix=config['prefix'], intents=intents)
+bot = commands.Bot(command_prefix=config['prefix'], intents=intents)
 bot.remove_command('help')
 
 #on_ready event
@@ -25,7 +25,7 @@ extensions = [
 ]
 
 #cycle for to install cog files
-for extension in extension:
+for extension in extensions:
   bot.load_extension(extension)
 
 #run

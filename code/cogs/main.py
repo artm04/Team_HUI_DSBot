@@ -13,6 +13,7 @@ class main(commands.Cog):
   async def on_ready(self):
     print('main cog - ACTIVATED\n')
 
+  #help command
   @commands.slash_command(name='help', description='help command')
   async def help(self, ctx):
     embed = disnake.Embed(

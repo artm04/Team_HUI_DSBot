@@ -25,4 +25,4 @@ class main(commands.Cog):
 
 #setup cog file
 def setup(bot):
-	bot.add_cog(main(bot)
+	bot.add_cog(main(bot))

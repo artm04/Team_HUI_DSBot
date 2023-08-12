@@ -36,7 +36,7 @@ class Admin(commands.Cog):
            	await ctx.send(f"Error: {e}")
 
     #Ban members
-    @commands.has_permissions(manage_member=True)
+    @commands.has_permissions(ban_members=True)
     @commands.command(name="ban", description="Ban member")
     async def ban(self, ctx, member: disnake.Member, reason="You have been ban."):
         try:

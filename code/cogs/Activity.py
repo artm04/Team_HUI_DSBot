@@ -5,7 +5,7 @@ import json
 
 
 #JSON load
-with open("/storage/emulated/0/Team Bot/cogs/author.json", "r") as f:
+with open("path/to/file", "r") as f:
   author = json.load(f)
 
 #Author var.

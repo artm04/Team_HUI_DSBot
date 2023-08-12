@@ -5,7 +5,7 @@ import json
 
 
 #JSON load
-with open("/storage/emulated/0/Team Bot/config.json", "r") as f:
+with open("config.json", "r") as f:
     config = json.load(f)
 
 #General

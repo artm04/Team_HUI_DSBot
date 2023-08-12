@@ -1,33 +1,36 @@
-#imports
-from disnake.ext import commands
+#Imports
 import disnake
+from disnake.ext import commands
 import json
 
 
-#json load
-with open('config.json', 'r') as f:
-  config = json.load(f)
+#JSON load
+with open("/storage/emulated/0/Team Bot/config.json", "r") as f:
+    config = json.load(f)
 
-
-#general
+#General
 intents = disnake.Intents.all()
-bot = commands.Bot(command_prefix=config['prefix'], intents=intents)
-bot.remove_command('help')
+bot = commands.Bot(command_prefix=config["prefix"], intents=intents)
+bot.remove_command("help")
+
 
 #on_ready event
 @bot.event
 async def on_ready():
-  print('Team bot is ACTIVATED\n')
+    print("Online.")
 
-#cog list
+
+#Cog list
 extensions = [
-  'cogs.main',
-  'cogs.admin'
+    'cogs.Main',
+    'cogs.Admin',
+    'cogs.Activity',
+    'cogs.Fun'
 ]
 
-#cycle for to install cog files
+#Cycle for to load a extensions
 for extension in extensions:
-  bot.load_extension(extension)
+    bot.load_extension(extension)
 
-#run
-bot.run(config['token'])
+#Run
+bot.run(config["token"])

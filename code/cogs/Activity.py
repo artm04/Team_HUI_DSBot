@@ -5,11 +5,11 @@ import json
 
 
 #JSON load
-with open("code/config.json", "r") as f:
-  config = json.load(f)
+with open("/storage/emulated/0/Team Bot/cogs/author.json", "r") as f:
+  author = json.load(f)
 
 #Author var.
-author = config["author"]
+author = author["author"]
 
 #Class create
 class Activity(commands.Cog):

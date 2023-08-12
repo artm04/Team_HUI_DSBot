@@ -21,7 +21,8 @@ async def on_ready():
 
 #cog list
 extensions = [
-  'cogs.main'
+  'cogs.main',
+  'cogs.admin'
 ]
 
 #cycle for to install cog files

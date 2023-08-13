@@ -25,7 +25,8 @@ extensions = [
     'cogs.Main',
     'cogs.Admin',
     'cogs.Activity',
-    'cogs.Fun'
+    'cogs.Fun',
+    'cogs.Moderation'
 ]
 
 #Cycle for to load a extensions

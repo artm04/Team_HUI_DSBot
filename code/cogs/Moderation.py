@@ -3,14 +3,16 @@ from disnake.ext import commands
 import disnake
 
 
+#Last message var.
 last_messages = {}
+
 
 #Class create
 class Moderation(commands.Cog):
 	def __init__(self, bot):
 		self.bot = bot
 		
-	#Cog listener
+	#Cog listener on_ready
 	@commands.Cog.listener()
 	async def on_ready(self):
 		print("Moderation cog - Online.")
@@ -21,7 +23,7 @@ class Moderation(commands.Cog):
 		if message.author.id in last_messages:
 			if message.content == last_messages[message.author.id].content:
 				await message.delete()
-				return
+				pass
 			
 		last_messages[message.author.id] = message
 		

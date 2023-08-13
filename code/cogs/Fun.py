@@ -20,6 +20,11 @@ class Fun(commands.Cog):
     async def dice(ctx):
     	await ctx.send(randint(1, 6))
 
+    #DicePlus
+    @commands.slash_command(name="diceplus", description="Outputs a random value from 1 to 20.")
+    async def dice(ctx):
+    	await ctx.send(randint(1, 20))
+
     #Roll
     @commands.slash_command(name="roll", description="Outputs a random value from 1 to 100.")
     async def roll(ctx):

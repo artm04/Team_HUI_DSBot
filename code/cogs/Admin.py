@@ -38,7 +38,7 @@ class Admin(commands.Cog):
     #Ban members
     @commands.has_permissions(ban_members=True)
     @commands.command(name="ban", description="Ban member")
-    async def ban(self, ctx, member: disnake.Member, reason="You have been ban."):
+    async def ban(self, ctx, member: disnake.Member, reason="You have been banned."):
         try:
             await member.ban(reason=reason)
             await ctx.send(f"User {member} ban, reason: {reason}", delete_after=10)
